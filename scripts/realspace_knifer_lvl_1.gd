@@ -4,10 +4,6 @@ var enemy_health: int = 10
 var speed: int = 120
 var direction: Vector2
 
-
-func _ready() -> void:
-	tween_hop()
-
 func _physics_process(_delta: float) -> void:
 	if PlayerData.player_location:
 		#look_at(PlayerData.player_location)
@@ -32,9 +28,3 @@ func take_damage():
 func _on_hurtbox_body_entered(body: Node2D) -> void:
 	take_damage()
 	body.queue_free()
-
-func tween_hop():
-	var tween = create_tween()
-	tween.set_loops()
-	tween.tween_property(self, "position:y", -20, 0.5)
-	tween.tween_property(self, "position:y", 20, 0.5)

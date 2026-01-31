@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://rgf18id0oy4d"]
+
+[ext_resource type="Script" uid="uid://dfw8r3m5gjxeo" path="res://scripts/realspace_knifer_lvl_1.gd" id="1_k3d35"]
+[ext_resource type="Texture2D" uid="uid://l0o2r6gthurk" path="res://assets/sprites/enemies/realspace/realspace_knifer_lvl1.png" id="2_agb6c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2jjlc"]
+radius = 48.0
+height = 250.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hxrpj"]
+radius = 75.0
+height = 270.0
+
+[node name="realspace_knifer_lvl1" type="CharacterBody2D" unique_id=1454355645]
+scale = Vector2(0.3, 0.3)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_k3d35")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1331937407]
+texture = ExtResource("2_agb6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1634331977]
+shape = SubResource("CapsuleShape2D_2jjlc")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1154585268]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1119688734]
+shape = SubResource("CapsuleShape2D_hxrpj")
+
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]

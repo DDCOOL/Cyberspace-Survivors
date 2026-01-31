@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://cdu47vumnhxba" path="res://scripts/player.gd" id="1_yewv4"]
 [ext_resource type="PackedScene" uid="uid://ls8duwj8x1cr" path="res://scenes/projectiles/bullet_player.tscn" id="2_dyp2m"]
 [ext_resource type="PackedScene" uid="uid://dxw6yb45mgi4o" path="res://scenes/ui/crosshair.tscn" id="3_76oj4"]
-[ext_resource type="Texture2D" uid="uid://c6ji0facbqvp6" path="res://assets/sprites/main_character/Idle.png" id="3_dyp2m"]
-[ext_resource type="Texture2D" uid="uid://dambv602nh7e0" path="res://assets/sprites/main_character/Dash.png" id="4_atpat"]
+[ext_resource type="Texture2D" uid="uid://c6ji0facbqvp6" path="res://assets/sprites/main_character_placeholder/Idle.png" id="3_dyp2m"]
+[ext_resource type="Texture2D" uid="uid://dambv602nh7e0" path="res://assets/sprites/main_character_placeholder/Dash.png" id="4_atpat"]
 [ext_resource type="Script" uid="uid://dbyapnf18vlv2" path="res://scripts/gun.gd" id="6_6eyoc"]
-[ext_resource type="Texture2D" uid="uid://dwx58qme4dcfq" path="res://assets/sprites/main_character/gun_placeholder.png" id="7_eojnx"]
+[ext_resource type="Texture2D" uid="uid://dwx58qme4dcfq" path="res://assets/sprites/main_character_placeholder/gun_placeholder.png" id="7_eojnx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kqtwu"]
 atlas = ExtResource("3_dyp2m")

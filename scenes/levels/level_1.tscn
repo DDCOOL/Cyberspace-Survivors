@@ -4,11 +4,13 @@
 [ext_resource type="Script" uid="uid://uc2bftlbcd61" path="res://scripts/level_1.gd" id="1_s8va5"]
 [ext_resource type="PackedScene" uid="uid://bxw4u0oxsdnhw" path="res://scenes/characters/player.tscn" id="2_6iamk"]
 [ext_resource type="Texture2D" uid="uid://da8oywoc2g018" path="res://assets/sprites/buildings/asset page 1.png" id="2_sk5k4"]
-[ext_resource type="PackedScene" uid="uid://8vf8mh4scvs5" path="res://scenes/characters/cyberspace_enemies/cyberspace_enemy_light_lvl_1.tscn" id="3_nsrm0"]
+[ext_resource type="PackedScene" uid="uid://8vf8mh4scvs5" path="res://scenes/characters/cyberspace_enemies/cs_enemy_light_lvl_1.tscn" id="3_nsrm0"]
 [ext_resource type="Texture2D" uid="uid://d2y3kdkdbq6fa" path="res://assets/sprites/buildings/Cyberpunk_City_Tiles_Fences.png" id="3_oc4kc"]
 [ext_resource type="Texture2D" uid="uid://vpfatqhetgpi" path="res://assets/sprites/buildings/Cyberpunk_City_Props.png" id="4_oc4kc"]
 [ext_resource type="Texture2D" uid="uid://6rkgc8ppnqwb" path="res://assets/sprites/buildings/Cyberpunk_City_Doors_Windows_Signs.png" id="4_s8va5"]
-[ext_resource type="PackedScene" uid="uid://ddg4ksmtclxma" path="res://scenes/characters/cyberspace_enemies/cs_enemy_medium_lvl_1.tscn" id="7_dga24"]
+[ext_resource type="PackedScene" uid="uid://rgf18id0oy4d" path="res://scenes/characters/realspace_enemies/realspace_knifer_lvl_1.tscn" id="8_qxy0u"]
+[ext_resource type="PackedScene" uid="uid://c0xfdorng47nb" path="res://scenes/characters/cyberspace_enemies/cs_enemy_light_lvl_2.tscn" id="9_qxy0u"]
+[ext_resource type="PackedScene" uid="uid://7r4egfnoi203" path="res://scenes/characters/cyberspace_enemies/cs_enemy_medium_lvl_2.tscn" id="10_excbq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk5k4"]
 texture = ExtResource("3_oc4kc")
@@ -1475,14 +1477,14 @@ tile_set = SubResource("TileSet_excbq")
 
 [node name="RealspaceEnemies" type="Node2D" parent="." unique_id=168176609]
 
-[node name="cs_enemy_medium_lvl1" parent="RealspaceEnemies" unique_id=1143063589 instance=ExtResource("7_dga24")]
-position = Vector2(635, -629)
+[node name="realspace_knifer_lvl1" parent="RealspaceEnemies" unique_id=1454355645 instance=ExtResource("8_qxy0u")]
+position = Vector2(601, 18)
 
-[node name="cs_enemy_medium_lvl2" parent="RealspaceEnemies" unique_id=1649596435 instance=ExtResource("7_dga24")]
-position = Vector2(1355, -52)
+[node name="realspace_knifer_lvl2" parent="RealspaceEnemies" unique_id=641928637 instance=ExtResource("8_qxy0u")]
+position = Vector2(715, -121)
 
-[node name="cs_enemy_medium_lvl3" parent="RealspaceEnemies" unique_id=1969531168 instance=ExtResource("7_dga24")]
-position = Vector2(1124, 331)
+[node name="realspace_knifer_lvl3" parent="RealspaceEnemies" unique_id=1769541310 instance=ExtResource("8_qxy0u")]
+position = Vector2(736, 380)
 
 [node name="CyberspaceEnemies" type="Node2D" parent="." unique_id=399227757]
 
@@ -1494,6 +1496,15 @@ position = Vector2(-803, 292)
 
 [node name="cyberspace_enemy_light_lvl3" parent="CyberspaceEnemies" unique_id=1218564642 instance=ExtResource("3_nsrm0")]
 position = Vector2(-787, -182)
+
+[node name="cyberspace_enemy_light_lvl4" parent="CyberspaceEnemies" unique_id=80764960 instance=ExtResource("9_qxy0u")]
+position = Vector2(-530, 397)
+
+[node name="cyberspace_enemy_light_lvl5" parent="CyberspaceEnemies" unique_id=2041974718 instance=ExtResource("9_qxy0u")]
+position = Vector2(-297, 435)
+
+[node name="cs_enemy_medium_lvl2" parent="CyberspaceEnemies" unique_id=1143063589 instance=ExtResource("10_excbq")]
+position = Vector2(-795, 39)
 
 [node name="Player" parent="." unique_id=1597117165 instance=ExtResource("2_6iamk")]
 
