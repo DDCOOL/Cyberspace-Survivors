@@ -51,7 +51,7 @@ _data = {
 radius = 154.45096
 
 [node name="cyberspace_enemy_light_lvl1" type="CharacterBody2D" unique_id=80764960]
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.5, 0.5)
 collision_layer = 2
 collision_mask = 8
 script = ExtResource("1_luox2")
