@@ -11,6 +11,10 @@ var budget:int = 10
 @export var real_med_l1: PackedScene	#20
 @export var real_med_l2: PackedScene	#200
 
+@onready var player_camera: Camera2D = $Player/Camera2D
+var camera_zoom_on: bool = true
+
+
 var realspace_enemies:Array
 var cyberspace_enemies:Array
 
@@ -21,6 +25,14 @@ func _ready() -> void:
 var cybermask_off = true
 
 func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("debug_camera_zoom"):
+		if camera_zoom_on:
+			player_camera.zoom = Vector2(0.6, 0.6)
+			camera_zoom_on = false
+		else:
+			player_camera.zoom = Vector2(1.2, 1.2)
+			camera_zoom_on = true
+
 	if Input.is_action_just_pressed("cybermask_toggle"):
 		
 		for i in $RealspaceEnemies.get_children():

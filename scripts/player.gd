@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+var player_health = 100
+var player_firewall = 100
 var speed: int = 300
 var movement_input: Vector2
 var mouse_position: Vector2
@@ -18,14 +20,19 @@ func _process(_delta: float) -> void:
 	#set rotation of sprite to 90 when used
 	PlayerData.player_location = global_position
 	PlayerData.crosshair_location = mouse_position
+	PlayerData.player_health = player_health
+	PlayerData.player_firewall = player_firewall
 	
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
+	if Input.is_action_just_pressed("damage_player_debug"):
+		player_health -= 20
+	if Input.is_action_just_pressed("damage_player_firewall_debug"):
+		player_firewall -= 20
 
 func _physics_process(_delta: float) -> void:
 	movement_input = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = movement_input * speed
-	
 	move_and_slide()
 
 func shoot():
