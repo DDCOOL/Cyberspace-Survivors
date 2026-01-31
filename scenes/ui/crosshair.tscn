@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dxw6yb45mgi4o"]
+
+[ext_resource type="Texture2D" uid="uid://dyfapwtugjrgq" path="res://assets/UI/crosshair.png" id="1_51nar"]
+[ext_resource type="Script" uid="uid://t718xg0kobag" path="res://scripts/crosshair.gd" id="1_n1pc2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n1pc2"]
+radius = 9.0
+
+[node name="Crosshair" type="Area2D" unique_id=150009226]
+scale = Vector2(2, 2)
+script = ExtResource("1_n1pc2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1494227371]
+shape = SubResource("CircleShape2D_n1pc2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1325260611]
+texture = ExtResource("1_51nar")

@@ -14,6 +14,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	mouse_position = get_global_mouse_position()
 	PlayerData.player_location = global_position
+	PlayerData.crosshair_location = mouse_position
 
 func _physics_process(_delta: float) -> void:
 	movement_input = Input.get_vector("move_left", "move_right", "move_up", "move_down")
