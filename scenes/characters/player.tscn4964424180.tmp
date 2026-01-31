@@ -14,7 +14,6 @@ script = ExtResource("1_yewv4")
 bullet_scene = ExtResource("2_dyp2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=364156994]
-rotation = 1.5707964
 texture = ExtResource("1_rp718")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1999543287]
