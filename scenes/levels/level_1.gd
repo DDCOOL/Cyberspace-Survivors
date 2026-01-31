@@ -76,7 +76,7 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
 					$RealspaceEnemies.add_child(enemy)
-				break
+					break
 			5:
 				if(localBudget >= 100):
 					localBudget -= 100
@@ -84,7 +84,7 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
 					$RealspaceEnemies.add_child(enemy)
-				break
+					break
 			6:
 				if(localBudget >= 20):
 					localBudget -= 20
@@ -92,7 +92,7 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
 					$RealspaceEnemies.add_child(enemy)
-				break
+					break
 			4:
 				if(localBudget >= 10):
 					localBudget -= 10
@@ -100,4 +100,4 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
 					$RealspaceEnemies.add_child(enemy)
-				break
+					break
