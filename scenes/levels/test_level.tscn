@@ -5,10 +5,10 @@
 
 [node name="TestLevel" type="Node2D" unique_id=860357705]
 
+[node name="cyberspace_enemy_light_lvl1" parent="." unique_id=80764960 instance=ExtResource("2_fr1um")]
+position = Vector2(862, 241)
+
 [node name="Player" parent="." unique_id=1597117165 instance=ExtResource("1_yautc")]
 position = Vector2(157, 98)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1707624539]
-
-[node name="cyberspace_enemy_light_lvl1" parent="." unique_id=80764960 instance=ExtResource("2_fr1um")]
-position = Vector2(862, 241)
