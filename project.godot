@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 
 PlayerData="*uid://dnxlnm8p1x1kv"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
 [dotnet]
 
 project/assembly_name="Cyberspace_Survivors"
