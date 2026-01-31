@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b81k1bv1lbegw"]
+
+[ext_resource type="PackedScene" uid="uid://bxw4u0oxsdnhw" path="res://scenes/characters/player.tscn" id="1_yautc"]
+[ext_resource type="PackedScene" uid="uid://8vf8mh4scvs5" path="res://scenes/characters/cyberspace_enemies/cyberspace_enemy_light_lvl_1.tscn" id="2_fr1um"]
+
+[node name="TestLevel" type="Node2D" unique_id=860357705]
+
+[node name="Player" parent="." unique_id=1597117165 instance=ExtResource("1_yautc")]
+position = Vector2(157, 98)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1707624539]
+
+[node name="cyberspace_enemy_light_lvl1" parent="." unique_id=80764960 instance=ExtResource("2_fr1um")]
+position = Vector2(862, 241)
