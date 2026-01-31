@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bxw4u0oxsdnhw" path="res://scenes/characters/player.tscn" id="1_yautc"]
 [ext_resource type="PackedScene" uid="uid://8vf8mh4scvs5" path="res://scenes/characters/cyberspace_enemies/cs_enemy_light_lvl_1.tscn" id="2_fr1um"]
-
+[ext_resource type="PackedScene" uid="uid://25twi5sct8is" path="res://scenes/ui/player_hud.tscn" id="3_fr1um"]
 
 [node name="TestLevel" type="Node2D" unique_id=860357705]
 
@@ -13,3 +13,21 @@ position = Vector2(862, 241)
 position = Vector2(157, 98)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1707624539]
+
+[node name="HUD" type="Control" parent="Player" unique_id=1705973555]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="player_HUD" parent="Player/HUD" unique_id=840784033 instance=ExtResource("3_fr1um")]
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -510.8333
+offset_top = -278.3333
+offset_right = -510.8333
+offset_bottom = -278.3333
+grow_horizontal = 1
+grow_vertical = 1

@@ -21,7 +21,6 @@ script = ExtResource("1_4ti7a")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1219353610]
 visible = false
-modulate = Color(0.9396015, 0.19206446, 0, 1)
 rotation = 1.5707964
 texture = SubResource("AtlasTexture_4ti7a")
 
