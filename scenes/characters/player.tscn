@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bxcolomnraybt" path="res://icon.svg" id="1_rp718"]
 [ext_resource type="Script" uid="uid://cdu47vumnhxba" path="res://scripts/player.gd" id="1_yewv4"]
+[ext_resource type="PackedScene" uid="uid://dxw6yb45mgi4o" path="res://scenes/ui/crosshair.tscn" id="3_76oj4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yewv4"]
 size = Vector2(128, 128)
@@ -15,3 +16,5 @@ texture = ExtResource("1_rp718")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1999543287]
 shape = SubResource("RectangleShape2D_yewv4")
+
+[node name="Crosshair" parent="." unique_id=150009226 instance=ExtResource("3_76oj4")]
