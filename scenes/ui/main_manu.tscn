@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://bxgaukydlyquy"]
 
 [ext_resource type="Script" uid="uid://df2eanstdaeac" path="res://scenes/ui/main_menu_control.gd" id="1_y4ab8"]
-[ext_resource type="Texture2D" uid="uid://bxcolomnraybt" path="res://icon.svg" id="2_xng62"]
 [ext_resource type="PackedScene" uid="uid://b45ggpuo61beu" path="res://scenes/ui/settings_menu.tscn" id="3_xng62"]
+
+[sub_resource type="Gradient" id="Gradient_y4ab8"]
+offsets = PackedFloat32Array(0.25721154, 0.59375, 0.7956731)
+colors = PackedColorArray(0, 0, 0.23529412, 1, 0.7808764, 0.7808764, 0.8324349, 1, 0.827451, 0.25882354, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xng62"]
+gradient = SubResource("Gradient_y4ab8")
 
 [node name="MainManu" type="Node" unique_id=65238869]
 
@@ -22,7 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_xng62")
+texture = SubResource("GradientTexture1D_xng62")
 
 [node name="StartGameButton" type="Button" parent="MainMenuControl" unique_id=462957939]
 layout_mode = 1
