@@ -30,7 +30,6 @@ func _process(_delta: float) -> void:
 			i.toggle_visibility()
 
 
-
 func _on_enemy_spawn_timer_timeout() -> void:
 	budget += 10
 	var localBudget = budget
@@ -38,30 +37,6 @@ func _on_enemy_spawn_timer_timeout() -> void:
 	while localBudget > 0:
 		var spawn = randi()%7
 		match spawn:
-			0:
-				if(localBudget >= 10):
-					localBudget -= 10
-					var enemy = cyber_light_l1.instantiate()
-					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
-					enemy.position = spawnLoc 
-					$CyberspaceEnemies.add_child(enemy)
-				break
-			1:
-				if(localBudget >= 100):
-					localBudget -= 100
-					var enemy = cyber_light_l2.instantiate()
-					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
-					enemy.position = spawnLoc
-					$CyberspaceEnemies.add_child(enemy)
-				break
-			2:
-				if(localBudget >= 20):
-					localBudget -= 20
-					var enemy = cyber_med_l1.instantiate()
-					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
-					enemy.position = spawnLoc
-					$CyberspaceEnemies.add_child(enemy)
-				break
 			3:
 				if(localBudget >= 200):
 					localBudget -= 200
@@ -69,11 +44,35 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
 					$CyberspaceEnemies.add_child(enemy)
-				break
-			4:
+					break
+			1:
+				if(localBudget >= 100):
+					localBudget -= 100
+					var enemy = cyber_light_l2.instantiate()
+					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
+					enemy.position = spawnLoc
+					$CyberspaceEnemies.add_child(enemy)
+					break
+			2:
+				if(localBudget >= 20):
+					localBudget -= 20
+					var enemy = cyber_med_l1.instantiate()
+					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
+					enemy.position = spawnLoc
+					$CyberspaceEnemies.add_child(enemy)
+					break
+			0:
 				if(localBudget >= 10):
 					localBudget -= 10
-					var enemy = real_light_l1.instantiate()
+					var enemy = cyber_light_l1.instantiate()
+					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
+					enemy.position = spawnLoc 
+					$CyberspaceEnemies.add_child(enemy)
+					break
+			7:
+				if(localBudget >= 200):
+					localBudget -= 200
+					var enemy = real_med_l2.instantiate()
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
 					$RealspaceEnemies.add_child(enemy)
@@ -94,12 +93,11 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					enemy.position = spawnLoc
 					$RealspaceEnemies.add_child(enemy)
 				break
-			7:
-				if(localBudget >= 200):
-					localBudget -= 200
-					var enemy = real_med_l2.instantiate()
+			4:
+				if(localBudget >= 10):
+					localBudget -= 10
+					var enemy = real_light_l1.instantiate()
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
 					$RealspaceEnemies.add_child(enemy)
 				break
-				
