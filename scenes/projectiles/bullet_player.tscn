@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ls8duwj8x1cr"]
+
+[ext_resource type="Script" uid="uid://c8y1ivm2t5ck8" path="res://scripts/bullet_player.gd" id="1_hnuhs"]
+[ext_resource type="Texture2D" uid="uid://qbrer6vgy8mo" path="res://assets/sprites/projectiles/bullet_player_placeholder.png" id="1_qdwhf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnuhs"]
+size = Vector2(2, 4)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qdwhf"]
+radius = 4.0
+
+[node name="BulletPlayer" type="CharacterBody2D" unique_id=1616550612]
+scale = Vector2(3, 3)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_hnuhs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2016607286]
+shape = SubResource("RectangleShape2D_hnuhs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1338780394]
+texture = ExtResource("1_qdwhf")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1313808527]
+visible = false
+
+[node name="WallDetector" type="Area2D" parent="." unique_id=571384968]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetector" unique_id=850040037]
+shape = SubResource("CircleShape2D_qdwhf")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
