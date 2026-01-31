@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://ddg4ksmtclxma"]
+[gd_scene format=3 uid="uid://7r4egfnoi203"]
 
-[ext_resource type="Script" uid="uid://bsnl8tgjy1ctf" path="res://scripts/cs_enemy_medium_lvl_1.gd" id="1_4ti7a"]
-[ext_resource type="Texture2D" uid="uid://br504tuq3gk2f" path="res://assets/sprites/enemies/cyberspace/cs_enemy_medium_lvl1.png" id="1_6wr2y"]
+[ext_resource type="Script" uid="uid://bsnl8tgjy1ctf" path="res://scripts/cs_enemy_medium_lvl_1.gd" id="1_d71yt"]
+[ext_resource type="Texture2D" uid="uid://dkr5qmam4qifj" path="res://assets/sprites/enemies/cyberspace/cs_enemy_medium_lvl2.png" id="2_d71yt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ti7a"]
-atlas = ExtResource("1_6wr2y")
+atlas = ExtResource("2_d71yt")
 region = Rect2(0, 0, 320, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_affth"]
@@ -13,16 +13,14 @@ size = Vector2(314, 250)
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ti7a"]
 radius = 154.45096
 
-[node name="cs_enemy_medium_lvl1" type="CharacterBody2D" unique_id=1143063589]
-scale = Vector2(0.5, 0.5)
+[node name="cs_enemy_medium_lvl2" type="CharacterBody2D" unique_id=1143063589]
+scale = Vector2(0.2, 0.2)
 collision_layer = 2
 collision_mask = 0
-script = ExtResource("1_4ti7a")
+script = ExtResource("1_d71yt")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1219353610]
 visible = false
-modulate = Color(0.9396015, 0.19206446, 0, 1)
-rotation = 1.5707964
 texture = SubResource("AtlasTexture_4ti7a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=119520026]

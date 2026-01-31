@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://8vf8mh4scvs5"]
+
+[ext_resource type="Texture2D" uid="uid://cnjakvphg2vdb" path="res://assets/sprites/enemies/cyberspace/cs_enemy_light_lvl1.png" id="1_lmn3i"]
+[ext_resource type="Script" uid="uid://r7j5a1l0j4rb" path="res://scripts/cyberspace_enemy_light_lvl_1.gd" id="1_luox2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_luox2"]
+atlas = ExtResource("1_lmn3i")
+region = Rect2(0, 0, 1920, 320)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3537a"]
+radius = 130.0346
+
+[sub_resource type="Animation" id="Animation_oaktp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_0wqpa"]
+resource_name = "move"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q8pfy"]
+_data = {
+&"RESET": SubResource("Animation_oaktp"),
+&"move": SubResource("Animation_0wqpa")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_luox2"]
+radius = 154.45096
+
+[node name="cyberspace_enemy_light_lvl1" type="CharacterBody2D" unique_id=80764960]
+scale = Vector2(0.5, 0.5)
+collision_layer = 2
+collision_mask = 8
+script = ExtResource("1_luox2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1079351327]
+visible = false
+rotation = 3.1415927
+scale = Vector2(0.7, 0.7)
+texture = SubResource("AtlasTexture_luox2")
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=807221756]
+shape = SubResource("CircleShape2D_3537a")
+debug_color = Color(0.9647059, 0, 0.13333334, 0.41960785)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=491695741]
+libraries/ = SubResource("AnimationLibrary_q8pfy")
+autoplay = &"move"
+speed_scale = 1.5
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=479502123]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=734809546]
+shape = SubResource("CircleShape2D_luox2")
+
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]

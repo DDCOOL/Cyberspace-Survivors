@@ -1,11 +1,7 @@
-[gd_scene format=3 uid="uid://8vf8mh4scvs5"]
+[gd_scene format=3 uid="uid://c0xfdorng47nb"]
 
-[ext_resource type="Texture2D" uid="uid://cnjakvphg2vdb" path="res://assets/sprites/enemies/cyberspace/cs_enemy_light_lvl1.png" id="1_lmn3i"]
-[ext_resource type="Script" uid="uid://r7j5a1l0j4rb" path="res://scripts/cyberspace_enemy_light_lvl_1.gd" id="1_luox2"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_luox2"]
-atlas = ExtResource("1_lmn3i")
-region = Rect2(0, 0, 640, 320)
+[ext_resource type="Script" uid="uid://r7j5a1l0j4rb" path="res://scripts/cyberspace_enemy_light_lvl_1.gd" id="1_ktffl"]
+[ext_resource type="Texture2D" uid="uid://dx86fsxic7oop" path="res://assets/sprites/enemies/cyberspace/cs_enemy_light_lvl2.png" id="2_ktffl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3537a"]
 radius = 130.0346
@@ -54,12 +50,14 @@ radius = 154.45096
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 collision_mask = 8
-script = ExtResource("1_luox2")
+script = ExtResource("1_ktffl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1079351327]
+visible = false
 rotation = 3.1415927
-texture = SubResource("AtlasTexture_luox2")
-hframes = 2
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_ktffl")
+hframes = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=807221756]
 shape = SubResource("CircleShape2D_3537a")
