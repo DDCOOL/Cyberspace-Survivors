@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bg8hlgl6a7b6r"]
+[gd_scene format=4 uid="uid://dirwy5ro7tmjj"]
 
 [ext_resource type="Texture2D" uid="uid://dq1mks5drpoen" path="res://assets/tileset/cyberspace_tileset.png" id="1_ksju7"]
 [ext_resource type="Script" uid="uid://bihedjlr7wkv4" path="res://scenes/levels/level_1.gd" id="1_x42e6"]

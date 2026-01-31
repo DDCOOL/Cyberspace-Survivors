@@ -6,3 +6,4 @@ extends Control
 
 func _process(_delta: float) -> void:
 	health_bar.value = PlayerData.player_health
+	firewall_bar.value = PlayerData.player_firewall
