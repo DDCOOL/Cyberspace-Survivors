@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://bxgaukydlyquy"]
+
+[ext_resource type="Script" uid="uid://df2eanstdaeac" path="res://scenes/ui/main_menu_control.gd" id="1_y4ab8"]
+[ext_resource type="Texture2D" uid="uid://bxcolomnraybt" path="res://icon.svg" id="2_xng62"]
+[ext_resource type="PackedScene" uid="uid://b45ggpuo61beu" path="res://scenes/ui/settings_menu.tscn" id="3_xng62"]
+
+[node name="MainManu" type="Node" unique_id=65238869]
+
+[node name="MainMenuControl" type="Control" parent="." unique_id=222478533]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y4ab8")
+
+[node name="BackgroundImage" type="TextureRect" parent="MainMenuControl" unique_id=68582388]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xng62")
+
+[node name="StartGameButton" type="Button" parent="MainMenuControl" unique_id=462957939]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5450938
+anchor_top = 0.18983334
+anchor_right = 0.7910937
+anchor_bottom = 0.2765556
+offset_left = 0.27996826
+offset_top = 0.31999207
+offset_right = -0.6000366
+offset_bottom = 1.8799744
+metadata/_edit_use_anchors_ = true
+
+[node name="StartGameLabel" type="Label" parent="MainMenuControl/StartGameButton" unique_id=971066831]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsButton" type="Button" parent="MainMenuControl" unique_id=1069501383]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3953125
+anchor_top = 0.39027777
+anchor_right = 0.63203126
+anchor_bottom = 0.48750004
+offset_right = 8.0
+offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
+
+[node name="SettingsLabel" type="Label" parent="MainMenuControl/SettingsButton" unique_id=675069470]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="Button" parent="MainMenuControl" unique_id=732870939]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 436.0
+offset_right = 702.0
+offset_bottom = 523.0
+
+[node name="ExitLabel" type="Label" parent="MainMenuControl/ExitButton" unique_id=2004022275]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsMenu" parent="." unique_id=1457986091 instance=ExtResource("3_xng62")]
+visible = false
+offset_left = 386.0
+offset_top = 9.0
+offset_right = 386.0
+offset_bottom = 9.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="pressed" from="MainMenuControl/StartGameButton" to="MainMenuControl" method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="MainMenuControl/SettingsButton" to="MainMenuControl" method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MainMenuControl/ExitButton" to="MainMenuControl" method="_on_exit_button_pressed"]
+[connection signal="isClosed" from="SettingsMenu" to="MainMenuControl" method="_on_settings_menu_is_closed"]
