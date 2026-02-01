@@ -22,19 +22,19 @@ func _on_start_game_button_pressed() -> void:
 
 func _on_settings_button_pressed() -> void:
 	$"../SettingsMenu".show()
-	$"../MainMenuControl".hide()
+	$"../MainMenuControl/main_manu".hide()
+
+
+func _on_settings_menu_is_closed() -> void:
+	$"../SettingsMenu".hide()
+	$"../MainMenuControl/main_manu".show()
 
 
 func _on_exit_button_pressed() -> void:
 	button_type = "quit"
 	$scene_transition/Timer.start()
 	$scene_transition/AnimationPlayer.play("easse_out")
-
-
-func _on_settings_menu_is_closed() -> void:
-	$"../SettingsMenu".hide()
-	$"../MainMenuControl".show()
-
+	
 
 func _on_fade_timer_timeout() -> void:
 	if button_type == "start":
