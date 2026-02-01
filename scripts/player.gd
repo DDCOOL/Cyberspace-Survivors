@@ -49,6 +49,9 @@ func _physics_process(_delta: float) -> void:
 	movement_input = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = movement_input * speed
 	move_and_slide()
+	
+	if player_health <= 0:
+		get_tree().change_scene_to_file("res://scenes/ui/lose_menu.tscn")
 
 func shoot():
 	var bullet = bullet_scene.instantiate()

@@ -146,7 +146,6 @@ texture = ExtResource("3_lodai")
 expand_mode = 1
 
 [node name="scene_transition" parent="MainMenuControl" unique_id=242247502 instance=ExtResource("4_lodai")]
-visible = false
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 
