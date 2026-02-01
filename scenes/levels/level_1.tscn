@@ -1619,13 +1619,13 @@ texture = ExtResource("15_bahl2")
 stream = ExtResource("14_mm8aj")
 volume_db = -10.0
 autoplay = true
-parameters/looping = false
+parameters/looping = true
 
 [node name="BackgroundMusicCyberspace" type="AudioStreamPlayer" parent="BackgroundMusic" unique_id=1014408672]
 stream = ExtResource("15_wtwp4")
 volume_db = -10.0
 autoplay = true
-parameters/looping = false
+parameters/looping = true
 
 [node name="Boundaries" type="Node2D" parent="." unique_id=1893813862]
 visible = false
