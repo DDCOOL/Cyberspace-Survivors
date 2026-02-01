@@ -230,5 +230,6 @@ debug_color = Color(0.9788502, 0, 0.39666367, 0.41960785)
 
 [node name="GunSound" type="AudioStreamPlayer2D" parent="." unique_id=672459063]
 stream = ExtResource("10_7vyk4")
+volume_db = -15.0
 
 [connection signal="body_entered" from="PlayerHurtbox" to="." method="_on_player_hurtbox_body_entered"]
