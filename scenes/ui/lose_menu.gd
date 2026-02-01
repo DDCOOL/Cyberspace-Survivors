@@ -2,6 +2,9 @@ extends Control
 
 var button_type = null
 
+func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
 func _on_main_menu_button_pressed() -> void:
 	button_type = "mainmenu"
 	$scene_transition/Timer.start()
