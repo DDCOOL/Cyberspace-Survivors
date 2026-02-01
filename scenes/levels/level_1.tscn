@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ddg4ksmtclxma" path="res://scenes/characters/cyberspace_enemies/cs_enemy_medium_lvl_1.tscn" id="4_dnkej"]
 [ext_resource type="Texture2D" uid="uid://vpfatqhetgpi" path="res://assets/sprites/buildings/Cyberpunk_City_Props.png" id="4_oc4kc"]
 [ext_resource type="Texture2D" uid="uid://6rkgc8ppnqwb" path="res://assets/sprites/buildings/Cyberpunk_City_Doors_Windows_Signs.png" id="4_s8va5"]
+[ext_resource type="PackedScene" path="res://scenes/characters/realspace_enemies/realspace_baseball_guy_lvl_1.tscn" id="7_np2pn"]
 [ext_resource type="PackedScene" uid="uid://rgf18id0oy4d" path="res://scenes/characters/realspace_enemies/realspace_knifer_lvl_1.tscn" id="8_qxy0u"]
 [ext_resource type="PackedScene" uid="uid://c0xfdorng47nb" path="res://scenes/characters/cyberspace_enemies/cs_enemy_light_lvl_2.tscn" id="9_qxy0u"]
 [ext_resource type="PackedScene" uid="uid://7r4egfnoi203" path="res://scenes/characters/cyberspace_enemies/cs_enemy_medium_lvl_2.tscn" id="10_excbq"]
@@ -1500,8 +1501,8 @@ cyber_med_l1 = ExtResource("4_dnkej")
 cyber_med_l2 = ExtResource("10_excbq")
 real_light_l1 = ExtResource("8_qxy0u")
 real_light_l2 = ExtResource("8_qxy0u")
-real_med_l1 = ExtResource("8_qxy0u")
-real_med_l2 = ExtResource("8_qxy0u")
+real_med_l1 = ExtResource("7_np2pn")
+real_med_l2 = ExtResource("7_np2pn")
 
 [node name="TileMapLayerGround" type="TileMapLayer" parent="." unique_id=170933072]
 z_index = -20
