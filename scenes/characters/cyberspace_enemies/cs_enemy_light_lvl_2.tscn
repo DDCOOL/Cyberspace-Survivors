@@ -46,7 +46,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_luox2"]
 radius = 154.45096
 
-[node name="cyberspace_enemy_light_lvl1" type="CharacterBody2D" unique_id=80764960]
+[node name="cyberspace_enemy_light_lvl1" type="CharacterBody2D" unique_id=80764960 groups=["cs"]]
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 collision_mask = 8

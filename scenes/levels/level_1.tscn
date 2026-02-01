@@ -13,7 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://c0xfdorng47nb" path="res://scenes/characters/cyberspace_enemies/cs_enemy_light_lvl_2.tscn" id="9_qxy0u"]
 [ext_resource type="PackedScene" uid="uid://7r4egfnoi203" path="res://scenes/characters/cyberspace_enemies/cs_enemy_medium_lvl_2.tscn" id="10_excbq"]
 [ext_resource type="Texture2D" uid="uid://baymfn5m070q1" path="res://assets/map/cyberspace_map.png" id="13_dnkej"]
+[ext_resource type="PackedScene" uid="uid://25twi5sct8is" path="res://scenes/ui/player_hud.tscn" id="13_iwr0g"]
 [ext_resource type="AudioStream" uid="uid://cfhkw3hom63ke" path="res://assets/music/Max Brhon - AI [NCS Release].mp3" id="14_mm8aj"]
+[ext_resource type="Texture2D" uid="uid://du2pqw3alvp1l" path="res://assets/map/realspace_map.png" id="15_bahl2"]
 [ext_resource type="AudioStream" uid="uid://dacaimmia8dfo" path="res://assets/music/electronic-futuristiccyberpunk-background-music-with-a-touch-of-8-bit-252502.mp3" id="15_wtwp4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk5k4"]
@@ -1460,6 +1462,36 @@ vertices = PackedVector2Array(3956, 781.9922, 3956, 2357.9922, 3715, 2111, 3714,
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5), PackedInt32Array(6, 7, 4, 5, 8, 9), PackedInt32Array(2, 1, 10, 11), PackedInt32Array(12, 11, 10, 13), PackedInt32Array(14, 13, 10, 15, 16), PackedInt32Array(17, 4, 7, 18), PackedInt32Array(19, 17, 18, 20), PackedInt32Array(21, 19, 20, 22), PackedInt32Array(21, 22, 23, 24), PackedInt32Array(24, 23, 25, 26), PackedInt32Array(27, 24, 26, 28), PackedInt32Array(25, 23, 6, 29), PackedInt32Array(28, 29, 6, 9, 30, 31, 27), PackedInt32Array(9, 32, 33, 30), PackedInt32Array(15, 27, 31), PackedInt32Array(5, 11, 12, 34, 35), PackedInt32Array(35, 8, 5), PackedInt32Array(32, 35, 34, 14), PackedInt32Array(33, 32, 14, 16), PackedInt32Array(15, 31, 16)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-638, -126, 1537, -124, 1539, -702, 2876, -699, 2880, 771, 3966, 772, 3966, 2368, -1472, 2366, -1468, 771, -640, 769)])
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwr0g"]
+size = Vector2(6702.5, 1554.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7h2jl"]
+size = Vector2(904, 1473)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mqh5v"]
+size = Vector2(2195, 584)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7o3do"]
+size = Vector2(1076, 1512)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bahl2"]
+size = Vector2(964, 638)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_np2pn"]
+size = Vector2(1791, 647)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6ha0"]
+size = Vector2(832, 573)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmpev"]
+size = Vector2(1317, 452)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkypq"]
+size = Vector2(2940, 309)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndtll"]
+size = Vector2(1729, 1085)
+
 [node name="level_1" type="Node2D" unique_id=340931664]
 script = ExtResource("1_x42e6")
 cyber_light_l1 = ExtResource("2_iav0o")
@@ -1483,16 +1515,19 @@ tile_map_data = PackedByteArray("AAAIAAEAAAABAAIAAAAIAAAAAAABAAEAAAAIAP//AAABAAE
 tile_set = SubResource("TileSet_nsrm0")
 
 [node name="TileMapLayerBuildings" type="TileMapLayer" parent="." unique_id=1552901223]
+visible = false
 z_index = -20
 tile_map_data = PackedByteArray("AAD4//v/AAABAAYAAAD5//v/AAABAAYAAAD6//v/AAABAAYAAAD7//v/AAABAAYAAAD8//v/AAABAAYAAAD9//v/AAABAAYAAAD+//v/AAABAAYAAAD///v/AAABAAYAAAAAAPv/AAABAAYAAAABAPv/AAABAAYAAAACAPv/AAACAAYAAAD3//v/AAAAAAYAAAD3//r/AAAAAAUAAAD3//n/AAAAAAUAAAD3//j/AAAAAAUAAAD3//f/AAAAAAUAAAD3//b/AAAAAAUAAAD3//X/AAAAAAUAAAACAPr/AAACAAUAAAACAPn/AAACAAUAAAACAPj/AAACAAUAAAACAPf/AAACAAUAAAACAPb/AAACAAUAAAACAPX/AAACAAUAAAD4//T/AAABAAQAAAD5//T/AAABAAQAAAD6//T/AAABAAQAAAD7//T/AAABAAQAAAD8//T/AAABAAQAAAD9//T/AAABAAQAAAD+//T/AAABAAQAAAD///T/AAABAAQAAAAAAPT/AAABAAQAAAABAPT/AAABAAQAAAACAPT/AAACAAQAAAD3//T/AAAAAAQAAAD4//X/AAABAAUAAAD4//b/AAABAAUAAAD4//f/AAABAAUAAAD4//j/AAABAAUAAAD4//n/AAABAAUAAAD4//r/AAAEAAUAAAD5//X/AAABAAUAAAD5//b/AAAEAAYAAAD5//f/AAABAAUAAAD5//j/AAABAAUAAAD5//n/AAABAAUAAAD5//r/AAABAAUAAAD6//X/AAABAAUAAAD6//b/AAABAAUAAAD6//f/AAABAAUAAAD6//j/AAABAAUAAAD6//n/AAABAAUAAAD6//r/AAABAAUAAAD7//X/AAABAAUAAAD7//b/AAABAAUAAAD7//f/AAABAAUAAAD7//j/AAABAAUAAAD7//n/AAABAAUAAAD7//r/AAABAAUAAAD8//X/AAABAAUAAAD8//b/AAABAAUAAAD8//f/AAABAAUAAAD8//j/AAABAAUAAAD8//n/AAABAAUAAAD8//r/AAABAAUAAAD9//X/AAABAAUAAAD9//b/AAABAAUAAAD9//f/AAABAAUAAAD9//j/AAABAAUAAAD9//n/AAABAAUAAAD9//r/AAABAAUAAAD+//X/AAABAAUAAAD+//b/AAABAAUAAAD+//f/AAABAAUAAAD+//j/AAABAAUAAAD+//n/AAABAAUAAAD+//r/AAABAAUAAAD///X/AAABAAUAAAD///b/AAABAAUAAAD///f/AAABAAUAAAD///j/AAABAAUAAAD///n/AAABAAUAAAD///r/AAABAAUAAAAAAPX/AAABAAUAAAAAAPb/AAAEAAUAAAAAAPf/AAABAAUAAAAAAPj/AAABAAUAAAAAAPn/AAABAAUAAAAAAPr/AAABAAUAAAABAPX/AAABAAUAAAABAPb/AAABAAUAAAABAPf/AAABAAUAAAABAPj/AAABAAUAAAABAPn/AAAEAAYAAAABAPr/AAABAAUAAAAFABAAAAAAAAIAAAARABAAAAACAAIAAAARAAkAAAACAAAAAAAFAAkAAAAAAAAAAAAGAAkAAAABAAAAAAAHAAkAAAABAAAAAAAIAAkAAAABAAAAAAAJAAkAAAABAAAAAAAKAAkAAAABAAAAAAALAAkAAAABAAAAAAAMAAkAAAABAAAAAAANAAkAAAABAAAAAAAOAAkAAAABAAAAAAAPAAkAAAABAAAAAAAQAAkAAAABAAAAAAAGABAAAAABAAIAAAAHABAAAAABAAIAAAAIABAAAAABAAIAAAAJABAAAAABAAIAAAAKABAAAAABAAIAAAALABAAAAABAAIAAAAMABAAAAABAAIAAAANABAAAAABAAIAAAAOABAAAAABAAIAAAAPABAAAAABAAIAAAAQABAAAAABAAIAAAARAA8AAAACAAEAAAARAA4AAAACAAEAAAARAA0AAAACAAEAAAARAAwAAAACAAEAAAARAAsAAAACAAEAAAARAAoAAAACAAEAAAAFAA8AAAAAAAEAAAAFAA4AAAAAAAEAAAAFAA0AAAAAAAEAAAAFAAwAAAAAAAEAAAAFAAsAAAAAAAEAAAAFAAoAAAAAAAEAAAAGAAoAAAABAAEAAAAGAAsAAAABAAEAAAAGAAwAAAABAAEAAAAGAA0AAAABAAEAAAAGAA4AAAABAAEAAAAGAA8AAAABAAEAAAAHAAoAAAABAAEAAAAHAAsAAAABAAEAAAAHAAwAAAABAAEAAAAHAA0AAAABAAEAAAAHAA4AAAABAAEAAAAHAA8AAAABAAEAAAAIAAoAAAABAAEAAAAIAAsAAAABAAEAAAAIAAwAAAABAAEAAAAIAA0AAAABAAEAAAAIAA4AAAABAAEAAAAIAA8AAAABAAEAAAAJAAoAAAABAAEAAAAJAAsAAAABAAEAAAAJAAwAAAABAAEAAAAJAA0AAAABAAEAAAAJAA4AAAABAAEAAAAJAA8AAAABAAEAAAAKAAoAAAABAAEAAAAKAAsAAAABAAEAAAAKAAwAAAABAAEAAAAKAA0AAAABAAEAAAAKAA4AAAABAAEAAAAKAA8AAAABAAEAAAALAAoAAAABAAEAAAALAAsAAAABAAEAAAALAAwAAAABAAEAAAALAA0AAAABAAEAAAALAA4AAAABAAEAAAALAA8AAAABAAEAAAAMAAoAAAABAAEAAAAMAAsAAAABAAEAAAAMAAwAAAABAAEAAAAMAA0AAAABAAEAAAAMAA4AAAABAAEAAAAMAA8AAAABAAEAAAANAAoAAAABAAEAAAANAAsAAAABAAEAAAANAAwAAAABAAEAAAANAA0AAAABAAEAAAANAA4AAAABAAEAAAANAA8AAAABAAEAAAAOAAoAAAABAAEAAAAOAAsAAAABAAEAAAAOAAwAAAABAAEAAAAOAA0AAAABAAEAAAAOAA4AAAABAAEAAAAOAA8AAAABAAEAAAAPAAoAAAABAAEAAAAPAAsAAAABAAEAAAAPAAwAAAABAAEAAAAPAA0AAAABAAEAAAAPAA4AAAABAAEAAAAPAA8AAAABAAEAAAAQAAoAAAABAAEAAAAQAAsAAAABAAEAAAAQAAwAAAABAAEAAAAQAA0AAAABAAEAAAAQAA4AAAABAAEAAAAQAA8AAAABAAEAAAD4/xYAAAAFAAYAAAD5/xYAAAAHAAYAAAD4/xUAAAAFAAQAAAD5/xUAAAAHAAQAAAD4/xQAAAAAAAcAAAD4/xMAAAAAAAcAAAD5/xQAAAAAAAgAAAD5/xMAAAAAAAcAAAD8/w8AAAAFAAQAAAD8/xAAAAAFAAUAAAD8/xEAAAAFAAYAAAD9/w8AAAAGAAQAAAD9/xAAAAAGAAUAAAD9/xEAAAAGAAYAAAD+/w8AAAAHAAQAAAD+/xAAAAAHAAUAAAD+/xEAAAAHAAYAAAD8/w0AAAABAAcAAAD8/w4AAAABAAgAAAD9/w0AAAABAAcAAAD9/w4AAAABAAgAAAD+/w0AAAABAAcAAAD+/w4AAAABAAgAAAA=")
 tile_set = SubResource("TileSet_sk5k4")
 
 [node name="TileMapLayerProps" type="TileMapLayer" parent="." unique_id=762611145]
+visible = false
 z_index = -20
 tile_map_data = PackedByteArray("AAD6//n/AAAAAAcAAAD6//r/AAAAAAgAAAABAPj/AAABAAQAAAD4//j/AAAAAAQAAAAEAPr/AAAFAAIAAAAEAPv/AAAFAAMAAAAKAAEAAAACAAIAAAASAP7/AAADAAMAAADv/wIAAAACAAIAAADw/xkAAAACAAIAAAADABMAAAACAAMAAAD4/w8AAAACAAIAAAD2/wYAAAAEAAQAAAAGAAcAAAAFAAQAAAD7/wgAAAACAAQAAAAUAAYAAAAEAAQAAAATAAYAAAAFAAQAAAAOAPr/AAACAAQAAAADAPj/AAAAAAIAAAADAPn/AAAAAAMAAAAEAPj/AAABAAIAAAAEAPn/AAABAAMAAAAKAPn/AAAHAAkAAAAKAPr/AAAHAAoAAAAKAPv/AAAHAAsAAAAHAPf/AAAAAA4AAAAHAPj/AAAAAA8AAAAIAPf/AAABAA4AAAAIAPj/AAABAA8AAAAJAPf/AAACAA4AAAAJAPj/AAACAA8AAAAKAPf/AAADAA4AAAAKAPj/AAADAA8AAAALAPf/AAAEAA4AAAALAPj/AAAEAA8AAADi/wMAAAAAABAAAADi/wQAAAAAABEAAADj/wMAAAABABAAAADj/wQAAAABABEAAADk/wMAAAACABAAAADk/wQAAAACABEAAADl/wMAAAADABAAAADl/wQAAAADABEAAADm/wMAAAAEABAAAADm/wQAAAAEABEAAAAOAAwAAAAIAAEAAAAPAAwAAAAJAAEAAADr//r/AAABAAAAAADr//v/AAABAAEAAADs//r/AAACAAAAAADs//v/AAACAAEAAADt//r/AAADAAAAAADt//v/AAADAAEAAAA=")
 tile_set = SubResource("TileSet_dga24")
 
 [node name="TileMapLayerDoors" type="TileMapLayer" parent="." unique_id=1430853600]
+visible = false
 z_index = -20
 tile_map_data = PackedByteArray("AAAKAA8AAAACAAAAAAAKABAAAAACAAEAAAALAA8AAAADAAAAAAALABAAAAADAAEAAAD+//r/AAAAAAAAAAD+//v/AAAAAAEAAAD///r/AAABAAAAAAD///v/AAABAAEAAAD6//f/AAAAAA4AAAD6//j/AAAAAA8AAAD+//f/AAAAAA4AAAD+//j/AAAAAA8AAAD///f/AAACAA4AAAD///j/AAACAA8AAAD7//f/AAACAA4AAAD7//j/AAACAA8AAAAGAAoAAAAEABEAAAAGAAsAAAAEABIAAAAGAAwAAAAEABMAAAAHAAoAAAAFABEAAAAHAAsAAAAFABIAAAAHAAwAAAAFABMAAAAIAAoAAAAGABEAAAAIAAsAAAAGABIAAAAIAAwAAAAGABMAAAAJAAoAAAAHABEAAAAJAAsAAAAHABIAAAAJAAwAAAAHABMAAAAKAAoAAAAIABEAAAAKAAsAAAAIABIAAAAKAAwAAAAIABMAAAALAAoAAAAJABEAAAALAAsAAAAJABIAAAALAAwAAAAJABMAAAD9/xAAAAACAAAAAAD9/xEAAAACAAEAAAD5/xUAAAACAAAAAAD5/xYAAAACAAEAAAA=")
 tile_set = SubResource("TileSet_excbq")
@@ -1501,6 +1536,28 @@ tile_set = SubResource("TileSet_excbq")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=733971292]
 zoom = Vector2(1.2, 1.2)
+limit_enabled = false
+limit_left = -1627
+limit_top = -844
+limit_right = 4090
+limit_bottom = 2577
+
+[node name="HUD" type="Control" parent="Player" unique_id=1811780601]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -737.1429
+offset_top = -390.0
+offset_right = -737.1429
+offset_bottom = -390.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.8093913, 2.3400688)
+
+[node name="player_HUD" parent="Player/HUD" unique_id=840784033 instance=ExtResource("13_iwr0g")]
+layout_mode = 1
+scale = Vector2(0.515, 0.515)
 
 [node name="EnemyRoamRegion" type="NavigationRegion2D" parent="." unique_id=735146372]
 navigation_polygon = SubResource("NavigationPolygon_nsrm0")
@@ -1550,6 +1607,12 @@ position = Vector2(1197, 814)
 scale = Vector2(2, 2.005)
 texture = ExtResource("13_dnkej")
 
+[node name="RealspaceLayer" type="Sprite2D" parent="." unique_id=1776278639]
+position = Vector2(1171, 825)
+rotation = 3.1415927
+scale = Vector2(2, 2)
+texture = ExtResource("15_bahl2")
+
 [node name="BackgroundMusic" type="Node2D" parent="." unique_id=1447842037]
 
 [node name="BackgroundMusicRealspace" type="AudioStreamPlayer" parent="BackgroundMusic" unique_id=1074598129]
@@ -1563,5 +1626,113 @@ stream = ExtResource("15_wtwp4")
 volume_db = -10.0
 autoplay = true
 parameters/looping = false
+
+[node name="Boundaries" type="Node2D" parent="." unique_id=1893813862]
+visible = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Boundaries" unique_id=1388604974]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D" unique_id=758952732]
+position = Vector2(1522, -1477)
+shape = SubResource("RectangleShape2D_iwr0g")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Boundaries" unique_id=1362851071]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D2" unique_id=1508337480]
+position = Vector2(4733, 417)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_iwr0g")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Boundaries" unique_id=1244763275]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D3" unique_id=183812303]
+position = Vector2(-2248, 1034)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_iwr0g")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Boundaries" unique_id=2001381628]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D4" unique_id=825590282]
+position = Vector2(1465, 3136)
+shape = SubResource("RectangleShape2D_iwr0g")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boundaries/StaticBody2D4" unique_id=1518513796]
+position = Vector2(-1090, 37.5)
+shape = SubResource("RectangleShape2D_7h2jl")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Boundaries/StaticBody2D4" unique_id=485026028]
+position = Vector2(450.5, -403)
+shape = SubResource("RectangleShape2D_mqh5v")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Boundaries/StaticBody2D4" unique_id=309090601]
+position = Vector2(3406, 33)
+shape = SubResource("RectangleShape2D_7o3do")
+
+[node name="BuildingColliders" type="Node2D" parent="." unique_id=1221238809]
+visible = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BuildingColliders" unique_id=1035258098]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuildingColliders/StaticBody2D" unique_id=1582514926]
+position = Vector2(95, 448)
+shape = SubResource("RectangleShape2D_bahl2")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="BuildingColliders" unique_id=1737940227]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuildingColliders/StaticBody2D2" unique_id=31773269]
+position = Vector2(1729.5, 448.5)
+shape = SubResource("RectangleShape2D_np2pn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BuildingColliders/StaticBody2D2" unique_id=1448283987]
+position = Vector2(2210, -160.5)
+shape = SubResource("RectangleShape2D_v6ha0")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="BuildingColliders" unique_id=551216379]
+position = Vector2(-555, 1223)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuildingColliders/StaticBody2D3" unique_id=1555489335]
+position = Vector2(-22.5, 14)
+shape = SubResource("RectangleShape2D_gmpev")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="BuildingColliders" unique_id=2071405630]
+position = Vector2(1069, 1237)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuildingColliders/StaticBody2D4" unique_id=1188815419]
+position = Vector2(-14, 6)
+shape = SubResource("RectangleShape2D_gmpev")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="BuildingColliders" unique_id=851394362]
+position = Vector2(133, 1937)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuildingColliders/StaticBody2D5" unique_id=511923741]
+position = Vector2(126, 13.5)
+shape = SubResource("RectangleShape2D_mkypq")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="BuildingColliders" unique_id=1636482088]
+position = Vector2(2829, 1499)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuildingColliders/StaticBody2D6" unique_id=592398077]
+position = Vector2(19.5, 68.5)
+shape = SubResource("RectangleShape2D_ndtll")
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]

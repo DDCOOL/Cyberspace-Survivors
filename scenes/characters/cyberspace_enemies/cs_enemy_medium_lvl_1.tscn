@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddg4ksmtclxma"]
 
-[ext_resource type="Script" path="res://scripts/cs_enemy_medium_lvl_1.gd" id="1_4ti7a"]
+[ext_resource type="Script" uid="uid://bsnl8tgjy1ctf" path="res://scripts/cs_enemy_medium_lvl_1.gd" id="1_4ti7a"]
 [ext_resource type="Texture2D" uid="uid://br504tuq3gk2f" path="res://assets/sprites/enemies/cyberspace/cs_enemy_medium_lvl1.png" id="1_6wr2y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ti7a"]
@@ -13,7 +13,7 @@ size = Vector2(314, 250)
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ti7a"]
 radius = 154.45096
 
-[node name="cs_enemy_medium_lvl1" type="CharacterBody2D" unique_id=1143063589]
+[node name="cs_enemy_medium_lvl1" type="CharacterBody2D" unique_id=1143063589 groups=["cs"]]
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 collision_mask = 0

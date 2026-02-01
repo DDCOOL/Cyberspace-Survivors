@@ -14,6 +14,8 @@ var is_in_cyberspace: bool = false
 @onready var player_sprite_realspace: AnimatedSprite2D = $PlayerSpriteRealspace
 @onready var player_sprite_cyberspace: AnimatedSprite2D = $PlayerSpriteCyberspace
 @onready var cyber_space_layer: Sprite2D = $"../CyberSpaceLayer"
+@onready var realspace_layer: Sprite2D = $"../RealspaceLayer"
+
 
 
 
@@ -56,6 +58,7 @@ func shoot():
 
 func toggle_player_appearance():
 	if !is_in_cyberspace:
+		realspace_layer.visible = false
 		cyber_space_layer.visible = true
 		is_in_cyberspace = true
 		player_sprite_realspace.visible = false
@@ -63,9 +66,25 @@ func toggle_player_appearance():
 		gun_sprite_rs.visible = false
 		gun_sprite_cs.visible = true
 	else:
+		realspace_layer.visible = true
 		is_in_cyberspace = false
 		cyber_space_layer.visible = false
 		player_sprite_realspace.visible = true
 		player_sprite_cyberspace.visible = false
 		gun_sprite_rs.visible = true
 		gun_sprite_cs.visible = false
+
+
+func _on_player_hurtbox_body_entered(body: Node2D) -> void:
+	if body.is_in_group("cs"):
+		take_firewall_damage()
+		body.queue_free()
+	elif body.is_in_group("rs"):
+		take_damage()
+		body.queue_free()
+
+func take_damage():
+	player_health -= 10
+
+func take_firewall_damage():
+	player_firewall -= 10
