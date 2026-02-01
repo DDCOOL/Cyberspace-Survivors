@@ -8,7 +8,7 @@ var direction: Vector2
 var navPath
 var currPathPoint 
 
-var path_point_margin: float = 0.5
+var path_point_margin: float = 5
 
 func _ready() -> void:
 	setTarget()
