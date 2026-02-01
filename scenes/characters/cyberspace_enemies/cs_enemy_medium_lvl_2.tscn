@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7r4egfnoi203"]
 
-[ext_resource type="Script" uid="uid://bsnl8tgjy1ctf" path="res://scripts/cs_enemy_medium_lvl_1.gd" id="1_d71yt"]
+[ext_resource type="Script" path="res://scripts/cs_enemy_medium_lvl_1.gd" id="1_d71yt"]
 [ext_resource type="Texture2D" uid="uid://dkr5qmam4qifj" path="res://assets/sprites/enemies/cyberspace/cs_enemy_medium_lvl2.png" id="2_d71yt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ti7a"]
@@ -23,7 +23,6 @@ script = ExtResource("1_d71yt")
 texture = SubResource("AtlasTexture_4ti7a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=119520026]
-visible = false
 position = Vector2(-8, 2)
 shape = SubResource("RectangleShape2D_affth")
 
