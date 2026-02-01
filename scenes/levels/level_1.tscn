@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bg8hlgl6a7b6r"]
+[gd_scene format=4 uid="uid://dirwy5ro7tmjj"]
 
 [ext_resource type="Texture2D" uid="uid://dq1mks5drpoen" path="res://assets/tileset/cyberspace_tileset.png" id="1_ksju7"]
 [ext_resource type="Script" uid="uid://bihedjlr7wkv4" path="res://scenes/levels/level_1.gd" id="1_x42e6"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://c0xfdorng47nb" path="res://scenes/characters/cyberspace_enemies/cs_enemy_light_lvl_2.tscn" id="9_qxy0u"]
 [ext_resource type="PackedScene" uid="uid://7r4egfnoi203" path="res://scenes/characters/cyberspace_enemies/cs_enemy_medium_lvl_2.tscn" id="10_excbq"]
 [ext_resource type="Texture2D" uid="uid://baymfn5m070q1" path="res://assets/map/cyberspace_map.png" id="13_dnkej"]
+[ext_resource type="AudioStream" uid="uid://cfhkw3hom63ke" path="res://assets/music/Max Brhon - AI [NCS Release].mp3" id="14_mm8aj"]
+[ext_resource type="AudioStream" uid="uid://dacaimmia8dfo" path="res://assets/music/electronic-futuristiccyberpunk-background-music-with-a-touch-of-8-bit-252502.mp3" id="15_wtwp4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk5k4"]
 texture = ExtResource("3_oc4kc")
@@ -1547,5 +1549,19 @@ z_index = -15
 position = Vector2(1197, 814)
 scale = Vector2(2, 2.005)
 texture = ExtResource("13_dnkej")
+
+[node name="BackgroundMusic" type="Node2D" parent="." unique_id=1447842037]
+
+[node name="BackgroundMusicRealspace" type="AudioStreamPlayer" parent="BackgroundMusic" unique_id=1074598129]
+stream = ExtResource("14_mm8aj")
+volume_db = -10.0
+autoplay = true
+parameters/looping = false
+
+[node name="BackgroundMusicCyberspace" type="AudioStreamPlayer" parent="BackgroundMusic" unique_id=1014408672]
+stream = ExtResource("15_wtwp4")
+volume_db = -10.0
+autoplay = true
+parameters/looping = false
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]

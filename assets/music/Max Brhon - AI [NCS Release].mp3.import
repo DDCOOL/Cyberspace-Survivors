@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfhkw3hom63ke"
+path="res://.godot/imported/Max Brhon - AI [NCS Release].mp3-92864c2f04161bc29160a988c767aad5.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Max Brhon - AI [NCS Release].mp3"
+dest_files=["res://.godot/imported/Max Brhon - AI [NCS Release].mp3-92864c2f04161bc29160a988c767aad5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

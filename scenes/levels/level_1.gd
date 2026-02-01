@@ -12,19 +12,27 @@ extends Node2D
 @export var real_med_l2: PackedScene	#200
 
 @onready var player_camera: Camera2D = $Player/Camera2D
+@onready var background_music_realspace: AudioStreamPlayer = $BackgroundMusic/BackgroundMusicRealspace
+@onready var background_music_cyberspace: AudioStreamPlayer = $BackgroundMusic/BackgroundMusicCyberspace
+
+
 var camera_zoom_on: bool = true
 
 
 var realspace_enemies:Array
 var cyberspace_enemies:Array
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+
 
 var cybermask_off = true
 
+func _ready() -> void:
+	background_music_cyberspace.stream_paused = true
+
+
 func _process(_delta: float) -> void:
+
+	
 	if Input.is_action_just_pressed("debug_camera_zoom"):
 		if camera_zoom_on:
 			player_camera.zoom = Vector2(0.6, 0.6)
@@ -42,6 +50,8 @@ func _process(_delta: float) -> void:
 		
 		for i in $CyberspaceEnemies.get_children():
 			i.toggle_visibility()
+		
+		toggle_music()
 
 
 func _on_enemy_spawn_timer_timeout() -> void:
@@ -133,3 +143,11 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					enemy.position = spawnLoc
 					enemy.visible = cybermask_off
 					$RealspaceEnemies.add_child(enemy)
+
+func toggle_music():
+	if PlayerData.is_in_cyberspace:
+		background_music_realspace.stream_paused = false
+		background_music_cyberspace.stream_paused = true
+	else:
+		background_music_cyberspace.stream_paused = false
+		background_music_realspace.stream_paused = true

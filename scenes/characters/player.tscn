@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://dbyapnf18vlv2" path="res://scripts/gun.gd" id="6_6eyoc"]
 [ext_resource type="Texture2D" uid="uid://bejqn54efrsi7" path="res://assets/sprites/player/rs_player_arm.png" id="7_6eyoc"]
 [ext_resource type="Texture2D" uid="uid://daqo21mwo3xk7" path="res://assets/sprites/player/cs_player_arm.png" id="9_qgnko"]
+[ext_resource type="AudioStream" uid="uid://cuitstyl34j1u" path="res://assets/SFX/laser-104024.mp3" id="10_7vyk4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_atpat"]
 atlas = ExtResource("4_atpat")
@@ -213,3 +214,6 @@ position = Vector2(34.166664, -2.5)
 rotation = 3.6634462
 scale = Vector2(2.375, 2.375)
 texture = ExtResource("9_qgnko")
+
+[node name="GunSound" type="AudioStreamPlayer2D" parent="." unique_id=672459063]
+stream = ExtResource("10_7vyk4")
