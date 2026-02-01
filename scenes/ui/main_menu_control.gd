@@ -30,11 +30,21 @@ func _on_settings_menu_is_closed() -> void:
 	$"../MainMenuControl/main_manu".show()
 
 
+func _on_credits_button_pressed() -> void:
+	$"../credits_menu".show()
+	$"../MainMenuControl/main_manu".hide()
+
+
+func _on_credits_menu_is_credits_closed() -> void:
+	$"../credits_menu".hide()
+	$"../MainMenuControl/main_manu".show()
+
+
 func _on_exit_button_pressed() -> void:
 	button_type = "quit"
 	$scene_transition/Timer.start()
 	$scene_transition/AnimationPlayer.play("easse_out")
-	
+
 
 func _on_fade_timer_timeout() -> void:
 	if button_type == "start":
