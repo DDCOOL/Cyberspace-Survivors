@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dirwy5ro7tmjj"]
+[gd_scene format=4 uid="uid://bg8hlgl6a7b6r"]
 
 [ext_resource type="Texture2D" uid="uid://dq1mks5drpoen" path="res://assets/tileset/cyberspace_tileset.png" id="1_ksju7"]
 [ext_resource type="Script" uid="uid://bihedjlr7wkv4" path="res://scenes/levels/level_1.gd" id="1_x42e6"]
@@ -1522,7 +1522,7 @@ vertices = PackedVector2Array(-1219, 1020, 64, 1023, 68, 1472, -1220, 1468)
 vertices = PackedVector2Array(-1218, 1792, 1728, 1792, 1730, 2112, -1218, 2111)
 
 [node name="EnemySpawnTimer" type="Timer" parent="." unique_id=213648453]
-wait_time = 10.0
+wait_time = 8.0
 autostart = true
 
 [node name="RealspaceEnemies" type="Node" parent="." unique_id=1217964590]
