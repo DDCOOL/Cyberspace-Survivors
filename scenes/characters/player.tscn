@@ -166,12 +166,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yewv4"]
-size = Vector2(128, 128)
+size = Vector2(60, 73)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qgnko"]
+radius = 17.5
+height = 105.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1597117165]
 z_index = 30
-scale = Vector2(1.2, 1.2)
-collision_mask = 0
+scale = Vector2(0.7, 0.7)
+collision_mask = 8
 script = ExtResource("1_yewv4")
 bullet_scene = ExtResource("2_dyp2m")
 
@@ -188,6 +192,7 @@ sprite_frames = SubResource("SpriteFrames_qgnko")
 animation = &"idle_cyberspace"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1999543287]
+position = Vector2(0, 24.5)
 shape = SubResource("RectangleShape2D_yewv4")
 
 [node name="Crosshair" parent="." unique_id=150009226 instance=ExtResource("3_76oj4")]
@@ -215,5 +220,15 @@ rotation = 3.6634462
 scale = Vector2(2.375, 2.375)
 texture = ExtResource("9_qgnko")
 
+[node name="PlayerHurtbox" type="Area2D" parent="." unique_id=1575522651]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHurtbox" unique_id=135562567]
+shape = SubResource("CapsuleShape2D_qgnko")
+debug_color = Color(0.9788502, 0, 0.39666367, 0.41960785)
+
 [node name="GunSound" type="AudioStreamPlayer2D" parent="." unique_id=672459063]
 stream = ExtResource("10_7vyk4")
+
+[connection signal="body_entered" from="PlayerHurtbox" to="." method="_on_player_hurtbox_body_entered"]
