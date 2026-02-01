@@ -35,6 +35,8 @@ func _process(_delta: float) -> void:
 
 	if Input.is_action_just_pressed("cybermask_toggle"):
 		
+		cybermask_off = !cybermask_off
+		
 		for i in $RealspaceEnemies.get_children():
 			i.toggle_visibility()
 		
@@ -55,6 +57,7 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					var enemy = cyber_med_l2.instantiate()
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
+					enemy.visible = !cybermask_off
 					$CyberspaceEnemies.add_child(enemy)
 				else:
 					spawn += 1
@@ -65,6 +68,7 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					var enemy = cyber_light_l2.instantiate()
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
+					enemy.visible = !cybermask_off
 					$CyberspaceEnemies.add_child(enemy)
 				else:
 					spawn += 1
@@ -75,6 +79,7 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					var enemy = cyber_med_l1.instantiate()
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
+					enemy.visible = !cybermask_off
 					$CyberspaceEnemies.add_child(enemy)
 				else:
 					spawn += 1
@@ -85,6 +90,7 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					var enemy = cyber_light_l1.instantiate()
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc 
+					enemy.visible = !cybermask_off
 					$CyberspaceEnemies.add_child(enemy)
 			4:
 				if(localBudget >= 200):
@@ -92,6 +98,7 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					var enemy = real_med_l2.instantiate()
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
+					enemy.visible = cybermask_off
 					$RealspaceEnemies.add_child(enemy)
 				else:
 					spawn += 1
@@ -102,6 +109,7 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					var enemy = real_light_l2.instantiate()
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
+					enemy.visible = cybermask_off
 					$RealspaceEnemies.add_child(enemy)
 				else:
 					spawn += 1
@@ -112,6 +120,7 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					var enemy = real_med_l1.instantiate()
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
+					enemy.visible = cybermask_off
 					$RealspaceEnemies.add_child(enemy)
 				else:
 					spawn += 1
@@ -122,4 +131,5 @@ func _on_enemy_spawn_timer_timeout() -> void:
 					var enemy = real_light_l1.instantiate()
 					var spawnLoc = NavigationServer2D.region_get_random_point($EnemyRoamRegion.get_rid(), 0, true)
 					enemy.position = spawnLoc
+					enemy.visible = cybermask_off
 					$RealspaceEnemies.add_child(enemy)
