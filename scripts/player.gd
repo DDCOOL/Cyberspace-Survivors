@@ -31,9 +31,11 @@ func _process(_delta: float) -> void:
 	PlayerData.crosshair_location = mouse_position
 	PlayerData.player_health = player_health
 	PlayerData.player_firewall = player_firewall
+	PlayerData.is_in_cyberspace = is_in_cyberspace
 	
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
+		$GunSound.play()
 	if Input.is_action_just_pressed("damage_player_debug"):
 		player_health -= 20
 	if Input.is_action_just_pressed("damage_player_firewall_debug"):
