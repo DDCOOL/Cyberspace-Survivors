@@ -1,4 +1,5 @@
 extends Node2D
+
 @export var budget:int = 100
 
 @export var cyber_light_l1: PackedScene #10

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://8vf8mh4scvs5"]
 
 [ext_resource type="Texture2D" uid="uid://cnjakvphg2vdb" path="res://assets/sprites/enemies/cyberspace/cs_enemy_light_lvl1.png" id="1_lmn3i"]
-[ext_resource type="Script" uid="uid://r7j5a1l0j4rb" path="res://scripts/cyberspace_enemy_light_lvl_1.gd" id="1_luox2"]
+[ext_resource type="Script" path="res://scripts/cyberspace_enemy_light_lvl_1.gd" id="1_luox2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_luox2"]
 atlas = ExtResource("1_lmn3i")
@@ -53,7 +53,7 @@ radius = 154.45096
 [node name="cyberspace_enemy_light_lvl1" type="CharacterBody2D" unique_id=80764960 groups=["cs"]]
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
-collision_mask = 8
+collision_mask = 0
 script = ExtResource("1_luox2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1079351327]

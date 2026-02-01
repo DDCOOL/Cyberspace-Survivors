@@ -1458,8 +1458,8 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_qxy0u")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_nsrm0"]
-vertices = PackedVector2Array(3956, 781.9922, 3956, 2357.9922, 3715, 2111, 3714, 1023, 2870.0313, 780.9922, 1981, 1023, 826, 778, 2631, 771, 1731, 1023, 380, 1021, -1461.9688, 2356, 1981, 2114, 1730, 2112, -1218, 2111, -1218, 1792, -1458.0234, 780.96875, -1220, 1468, 2866.0234, -689.02344, 2624, -448, 1548.9609, -691.96875, 1790, -450, 1546.9688, -113.99219, 1789, 120, 833, 120, -628.02344, -115.99219, 580, 126, -388, 128, -630.02344, 778.97656, -387, 769, 578, 769, 64, 1023, -1219, 1020, 381, 1474, 68, 1472, 1728, 1792, 1730, 1471)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5), PackedInt32Array(6, 7, 4, 5, 8, 9), PackedInt32Array(2, 1, 10, 11), PackedInt32Array(12, 11, 10, 13), PackedInt32Array(14, 13, 10, 15, 16), PackedInt32Array(17, 4, 7, 18), PackedInt32Array(19, 17, 18, 20), PackedInt32Array(21, 19, 20, 22), PackedInt32Array(21, 22, 23, 24), PackedInt32Array(24, 23, 25, 26), PackedInt32Array(27, 24, 26, 28), PackedInt32Array(25, 23, 6, 29), PackedInt32Array(28, 29, 6, 9, 30, 31, 27), PackedInt32Array(9, 32, 33, 30), PackedInt32Array(15, 27, 31), PackedInt32Array(5, 11, 12, 34, 35), PackedInt32Array(35, 8, 5), PackedInt32Array(32, 35, 34, 14), PackedInt32Array(33, 32, 14, 16), PackedInt32Array(15, 31, 16)])
+vertices = PackedVector2Array(3956, 781.9922, 3956, 2357.9922, 3714.9453, 2083.125, 3713, 1055, 2866.0234, -689.02344, 2870.0313, 780.9922, 2630.8281, 737.4922, 2625, -413, 2595.0547, -448.0703, 1548.9609, -691.96875, 1816.0703, -449.9375, 1791, -429, 1546.9688, -113.99219, 1789, 120, 852, 119, -628.02344, -115.99219, 832, 136, 542, 124, 579.89844, 158.60938, 826.2578, 753.7031, 578.08594, 741.03906, 1731, 1070, 1981, 1054, 1982, 2078, 1728, 1438, 1700.4297, 1471.0625, 1728, 1821.6406, 3687, 2110, -1461.9688, 2356, 2012.8281, 2113.9219, 380.0625, 1050.4375, 382, 1442, 66, 1436, 64.16406, 1056.8359, 3677.6172, 1023, 2014, 1023, 1728, 2075, 1696, 1791, 410.82813, 1473.9375, -1193.9688, 1792, 30.039063, 1471.8828, 2602, 770, 853, 777, 1690.8281, 1022.9375, 1702.0391, 2111.9453, -1188, 2106, -1218.1016, 2080.836, -1458.0234, 780.96875, -1219, 1813, -1220, 1427, 411, 1021, 548, 769, -364, 769, 27, 1021, -630.02344, 778.97656, -350.20313, 127.921875, -387, 155, -387.03906, 744.52344, -1180.3594, 1468.125, -1222, 1065, -1173.9688, 1020.03906)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(4, 7, 8), PackedInt32Array(9, 4, 8, 10), PackedInt32Array(9, 10, 11), PackedInt32Array(12, 9, 11, 13), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(15, 14, 16, 17), PackedInt32Array(18, 16, 19, 20), PackedInt32Array(21, 22, 23, 24), PackedInt32Array(25, 24, 23, 26), PackedInt32Array(27, 2, 1), PackedInt32Array(27, 1, 28, 29), PackedInt32Array(30, 31, 32, 33), PackedInt32Array(0, 3, 34), PackedInt32Array(5, 0, 34, 35), PackedInt32Array(23, 36, 26), PackedInt32Array(25, 26, 37), PackedInt32Array(38, 25, 37, 39), PackedInt32Array(31, 38, 39, 40), PackedInt32Array(41, 6, 5), PackedInt32Array(41, 5, 35, 42), PackedInt32Array(42, 35, 22, 43), PackedInt32Array(44, 36, 23, 29), PackedInt32Array(44, 29, 28, 45), PackedInt32Array(46, 45, 28), PackedInt32Array(46, 28, 47, 48), PackedInt32Array(39, 48, 47, 49), PackedInt32Array(22, 21, 43), PackedInt32Array(42, 43, 50), PackedInt32Array(20, 19, 42, 50, 51), PackedInt32Array(52, 51, 50, 30, 53, 54), PackedInt32Array(16, 18, 17), PackedInt32Array(15, 17, 55), PackedInt32Array(15, 55, 56), PackedInt32Array(54, 15, 56, 57), PackedInt32Array(54, 57, 52), PackedInt32Array(40, 32, 31), PackedInt32Array(58, 40, 39), PackedInt32Array(49, 58, 39), PackedInt32Array(59, 49, 47), PackedInt32Array(60, 59, 47), PackedInt32Array(60, 47, 54, 53), PackedInt32Array(53, 30, 33)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-638, -126, 1537, -124, 1539, -702, 2876, -699, 2880, 771, 3966, 772, 3966, 2368, -1472, 2366, -1468, 771, -640, 769)])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iwr0g"]
@@ -1563,32 +1563,32 @@ scale = Vector2(0.515, 0.515)
 navigation_polygon = SubResource("NavigationPolygon_nsrm0")
 
 [node name="HouseLShaped" type="NavigationObstacle2D" parent="EnemyRoamRegion" unique_id=1759755534]
-vertices = PackedVector2Array(1790, -450, 2624, -448, 2631, 771, 826, 778, 833, 120, 1789, 120)
+vertices = PackedVector2Array(1791, -429, 1816.0698, -449.9375, 2595.0566, -448.0694, 2625, -413, 2630.83, 737.4918, 2602, 770, 853, 777, 826.2584, 753.70557, 832, 136, 852, 119, 1789, 120)
 affect_navigation_mesh = true
 carve_navigation_mesh = true
 
 [node name="HouseSmallN" type="NavigationObstacle2D" parent="EnemyRoamRegion" unique_id=1633397377]
-vertices = PackedVector2Array(-388, 128, -387, 769, 578, 769, 580, 126)
+vertices = PackedVector2Array(-387, 155, -387.03818, 744.52594, -364, 769, 548, 769, 578.087, 741.03754, 579.89856, 158.6073, 542, 124, -350.20425, 127.921906)
 affect_navigation_mesh = true
 carve_navigation_mesh = true
 
 [node name="HouseBigSE" type="NavigationObstacle2D" parent="EnemyRoamRegion" unique_id=1640640729]
-vertices = PackedVector2Array(1981, 1023, 3714, 1023, 3715, 2111, 1981, 2114)
+vertices = PackedVector2Array(2014, 1023, 3677.6162, 1023.00006, 3713, 1055, 3714.9473, 2083.124, 3687, 2110, 2012.8251, 2113.9253, 1982, 2078, 1981, 1054)
 affect_navigation_mesh = true
 carve_navigation_mesh = true
 
 [node name="HouseSmallM" type="NavigationObstacle2D" parent="EnemyRoamRegion" unique_id=812814725]
-vertices = PackedVector2Array(380, 1021, 1731, 1023, 1730, 1471, 381, 1474)
+vertices = PackedVector2Array(411, 1021, 1690.8302, 1022.9405, 1731, 1070, 1728, 1438, 1700.4325, 1471.0657, 410.83163, 1473.9336, 382, 1442, 380.06497, 1050.436)
 affect_navigation_mesh = true
 carve_navigation_mesh = true
 
 [node name="HouseSmallW" type="NavigationObstacle2D" parent="EnemyRoamRegion" unique_id=360271196]
-vertices = PackedVector2Array(-1219, 1020, 64, 1023, 68, 1472, -1220, 1468)
+vertices = PackedVector2Array(-1222, 1065, -1173.965, 1020.03613, 27, 1021, 64.16382, 1056.8359, 66, 1436, 30.037415, 1471.8821, -1180.3608, 1468.123, -1220, 1427)
 affect_navigation_mesh = true
 carve_navigation_mesh = true
 
 [node name="HouseWideSW" type="NavigationObstacle2D" parent="EnemyRoamRegion" unique_id=1183203522]
-vertices = PackedVector2Array(-1218, 1792, 1728, 1792, 1730, 2112, -1218, 2111)
+vertices = PackedVector2Array(-1219, 1813, -1193.9658, 1791.9999, 1696, 1791, 1727.9999, 1821.6426, 1728, 2075, 1702.0393, 2111.9424, -1188, 2106, -1218.1012, 2080.835)
 affect_navigation_mesh = true
 carve_navigation_mesh = true
 
